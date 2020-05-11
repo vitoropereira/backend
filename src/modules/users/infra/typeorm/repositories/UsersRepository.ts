@@ -33,6 +33,7 @@ class UsersRespository implements IUsersRepository {
 
     return appointments
   }
+
   public async save(user: User): Promise<User> {
     return this.ormRepository.save(user)
   }

@@ -9,6 +9,7 @@ import AppError from '@shared/errors/AppError'
 import routes from './routes'
 
 import '@shared/infra/typeorm'
+import '@shared/container'
 
 const app = express()
 
@@ -18,7 +19,7 @@ app.use('/file', express.static(uploadConfig.directory))
 app.use(routes)
 
 app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
-  if( err instanceof AppError){
+  if (err instanceof AppError) {
     return response.status(err.statusCode).json({
       status: 'error',
       message: err.message
