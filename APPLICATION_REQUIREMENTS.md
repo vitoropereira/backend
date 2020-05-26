@@ -1,31 +1,31 @@
 # Recuperaçã de Senha
 **RF** Requisitos Funcionais
-- O usuário deve poder recuperar sua senha informando oseu e-mail;
-- O usuário deve receber um e-mail com instruções de recuperação de senha;
-- O usuário deve poder resetar sua senha;
+[x] O usuário deve poder recuperar sua senha informando o seu e-mail;
+[x] O usuário deve receber um e-mail com instruções de recuperação de senha;
+[x] O usuário deve poder resetar sua senha;
 
 
 **RNF** Requisitos não Funcionais
-- Utilizar Mailtrap para testar envios em ambiente de desenvolvimento;
-- Utilizar o Amazon SES para envios em produção;
-- O envio de e-mails deve acontecer em segundo plano (background job)
+[x] Utilizar Mailtrap para testar envios em ambiente de desenvolvimento;
+[x] Utilizar o Amazon SES para envios em produção;
+[x] O envio de e-mails deve acontecer em segundo plano (background job)
 
 **RN** Regras de Negócio
-- O link enviado por e-mail de resetar senha, deve expirar em 2h;
-- O usuário precisa confirmar a nova senha ao resetar sua senha;
+[x] O link enviado por e-mail de resetar senha, deve expirar em 2h;
+[x] O usuário precisa confirmar a nova senha ao resetar sua senha;
 
 
 # Atualização do perfil
 **RF**
-- O usuário deve poder atualizar seu nome, email e senha.
+[x] O usuário deve poder atualizar seu nome, email e senha.
 
 **RNF** Requisitos não Funcionais
-n/a
+[x] n/a
 
 **RN** Regras de Negócio (deve sempre estar atrelada a um requisito funcional.)
-- O usuário não pode alterar seu e-mail para um e-mail já utilziado;
-- Para atualizar sua senha, o usuário deve informar a senha antiga;
-- Para atualizar sua senha, o usuário precisa confirmar a nova senha;
+[x] O usuário não pode alterar seu e-mail para um e-mail já utilziado;
+[x] Para atualizar sua senha, o usuário deve informar a senha antiga;
+[x] Para atualizar sua senha, o usuário precisa confirmar a nova senha;
 
 
 # Painel do prestador
