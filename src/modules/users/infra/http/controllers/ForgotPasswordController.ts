@@ -5,10 +5,10 @@ import SendForgotPassordEmailService from "@modules/users/services/SendForgotPas
 
 export default class ForgotPasswordController {
   public async create(request: Request, response: Response): Promise<Response> {
-    const { email, password } = request.body
+    const { email } = request.body
 
     const sendForgotPassordEmailService = container.resolve(SendForgotPassordEmailService)
-
+    console.log('cheguei aqui!')
     await sendForgotPassordEmailService.execute({
       email,
     })

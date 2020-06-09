@@ -16,11 +16,11 @@ class SendForgotPassordEmailService {
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
 
+    @inject('UserTokensRepository')
+    private userTokensRepository: IUserTokensRepository,
+
     @inject('MailProvider')
     private mailProvider: IMailProvider,
-
-    @inject('UserTokensRepository')
-    private userTokensRepository: IUserTokensRepository
   ) { }
 
   public async execute({ email }: IRequest): Promise<void> {
@@ -46,10 +46,10 @@ class SendForgotPassordEmailService {
       },
       subject: '[GoBarber] Recuperação de Senha',
       templateData: {
-        file : forgatPasswordTemplate,
+        file: forgatPasswordTemplate,
         variable: {
           name: user.name,
-          link: `${process.env.APP_WEB_URL}/reset_password?token=${token}`,
+          link: `${process.env.APP_WEB_URL}/reset-password?token=${token}`,
         }
       }
     })
