@@ -6,7 +6,7 @@ import IFindAllProvidersDTO from '@modules/users/dtos/IFindAllProvidersDTO'
 
 import User from "@modules/users/infra/typeorm/entities/User"
 
-class UsersRespository implements IUsersRepository {
+class UsersRepository implements IUsersRepository {
   private ormRepository: Repository<User>
 
   constructor() {
@@ -58,4 +58,4 @@ class UsersRespository implements IUsersRepository {
 
 }
 
-export default UsersRespository
+export default UsersRepository
